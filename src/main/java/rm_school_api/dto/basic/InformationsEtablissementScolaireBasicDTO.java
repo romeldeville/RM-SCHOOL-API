@@ -1,0 +1,43 @@
+package rm_school_api.dto.basic;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.SuperBuilder;
+import rm_school_api.dto.AbstractDTO;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@SuperBuilder
+public class InformationsEtablissementScolaireBasicDTO extends AbstractDTO {
+    private String pays;
+    private String paysAnglais;
+    private String devisePays;
+    private String devisePaysAnglais;
+    private String ministere;
+    private String ministereAnglais;
+    private String region;
+    private String regionAnglais;
+    private String departement;
+    private String departementAnglais;
+    private String arrondissement;
+    private String arrondissementAnglais;
+    private String ville;
+    private String villeAnglais;
+    private String localisation;
+    private String localisationAnglais;
+    private String nom;
+    private String nomAnglais;
+    private String abreviation;
+    private String abreviationAnglais;
+    private String devise;
+    private String deviseAnglais;
+    private String telephone;
+    private String codePostal;
+    private String fax;
+    private String email;
+    private String logo;
+    private Long anneeScolaireId;
+    private Long etablissementScolaireId;
+}
