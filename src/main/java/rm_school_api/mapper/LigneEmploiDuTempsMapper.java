@@ -13,7 +13,7 @@ import rm_school_api.entity.JourSemaine;
 import rm_school_api.entity.LigneEmploiDuTemps;
 
 @Mapper(componentModel = "spring")
-public interface LigneEmploiDuTempsMapper {
+public interface LigneEmploiDuTempsMapper extends AbstractMapper<LigneEmploiDuTemps, LigneEmploiDuTempsBasicDTO, LigneEmploiDuTempsFullDTO> {
     @Mapping(source = "jourSemaine.id", target = "jourSemaineId")
     @Mapping(source = "creneauHoraire.id", target = "creneauHoraireId")
     @Mapping(source = "coursEnseignant.id", target = "coursEnseignantId")

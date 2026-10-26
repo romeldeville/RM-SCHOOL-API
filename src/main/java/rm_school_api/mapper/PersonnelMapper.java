@@ -9,7 +9,7 @@ import rm_school_api.entity.CompteUtilisateur;
 import rm_school_api.entity.Personnel;
 
 @Mapper(componentModel = "spring")
-public interface PersonnelMapper {
+public interface PersonnelMapper extends AbstractMapper<Personnel, PersonnelBasicDTO, PersonnelFullDTO> {
     @Mapping(source = "compteUtilisateur.id", target = "compteUtilisateurId")
     PersonnelBasicDTO toBasicDTO(Personnel entity);
 

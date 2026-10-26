@@ -9,7 +9,7 @@ import rm_school_api.entity.Frais;
 import rm_school_api.entity.Pension;
 
 @Mapper(componentModel = "spring")
-public interface FraisMapper {
+public interface FraisMapper extends AbstractMapper<Frais, FraisBasicDTO, FraisFullDTO> {
     @Mapping(source = "pension.id", target = "pensionId")
     FraisBasicDTO toBasicDTO(Frais entity);
 

@@ -9,7 +9,7 @@ import rm_school_api.entity.AbsencePersonnel;
 import rm_school_api.entity.InformationsPersonnel;
 
 @Mapper(componentModel = "spring")
-public interface AbsencePersonnelMapper {
+public interface AbsencePersonnelMapper extends AbstractMapper<AbsencePersonnel, AbsencePersonnelBasicDTO, AbsencePersonnelFullDTO> {
     @Mapping(source = "informationsPersonnel.id", target = "informationsPersonnelId")
     AbsencePersonnelBasicDTO toBasicDTO(AbsencePersonnel entity);
 

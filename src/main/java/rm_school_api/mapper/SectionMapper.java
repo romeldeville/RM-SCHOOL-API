@@ -9,7 +9,7 @@ import rm_school_api.entity.InformationsEtablissementScolaire;
 import rm_school_api.entity.Section;
 
 @Mapper(componentModel = "spring")
-public interface SectionMapper {
+public interface SectionMapper extends AbstractMapper<Section, SectionBasicDTO, SectionFullDTO> {
     @Mapping(source = "informationsEtablissementScolaire.id", target = "informationsEtablissementScolaireId")
     SectionBasicDTO toBasicDTO(Section entity);
 

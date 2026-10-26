@@ -6,7 +6,7 @@ import rm_school_api.dto.full.TypeCreneauFullDTO;
 import rm_school_api.entity.TypeCreneau;
 
 @Mapper(componentModel = "spring")
-public interface TypeCreneauMapper {
+public interface TypeCreneauMapper extends AbstractMapper<TypeCreneau, TypeCreneauBasicDTO, TypeCreneauFullDTO> {
     TypeCreneauBasicDTO toBasicDTO(TypeCreneau entity);
 
     TypeCreneauFullDTO toFullDTO(TypeCreneau entity);

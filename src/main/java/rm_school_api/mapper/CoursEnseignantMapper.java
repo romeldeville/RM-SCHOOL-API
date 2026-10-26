@@ -13,7 +13,7 @@ import rm_school_api.entity.CoursEnseignant;
 import rm_school_api.entity.InformationsPersonnel;
 
 @Mapper(componentModel = "spring")
-public interface CoursEnseignantMapper {
+public interface CoursEnseignantMapper extends AbstractMapper<CoursEnseignant, CoursEnseignantBasicDTO, CoursEnseignantFullDTO> {
     @Mapping(source = "courNiveau.id", target = "courNiveauId")
     @Mapping(source = "classe.id", target = "classeId")
     @Mapping(source = "informationsPersonnel.id", target = "informationsPersonnelId")

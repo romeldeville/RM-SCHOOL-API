@@ -1,0 +1,7 @@
+package rm_school_api.service;
+
+import rm_school_api.dto.basic.InformationsEtablissementScolaireBasicDTO;
+import rm_school_api.dto.full.InformationsEtablissementScolaireFullDTO;
+
+public interface InformationsEtablissementScolaireService extends AbstractService<InformationsEtablissementScolaireBasicDTO, InformationsEtablissementScolaireFullDTO> {
+}

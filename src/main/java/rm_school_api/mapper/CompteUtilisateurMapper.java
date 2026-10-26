@@ -11,7 +11,7 @@ import rm_school_api.entity.Role;
 import rm_school_api.entity.StatutCompteUtilisateur;
 
 @Mapper(componentModel = "spring")
-public interface CompteUtilisateurMapper {
+public interface CompteUtilisateurMapper extends AbstractMapper<CompteUtilisateur, CompteUtilisateurBasicDTO, CompteUtilisateurFullDTO> {
     @Mapping(source = "statutCompteUtilisateur.id", target = "statutCompteUtilisateurId")
     @Mapping(source = "role.id", target = "roleId")
     CompteUtilisateurBasicDTO toBasicDTO(CompteUtilisateur entity);

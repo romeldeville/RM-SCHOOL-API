@@ -6,7 +6,7 @@ import rm_school_api.dto.full.GroupeFullDTO;
 import rm_school_api.entity.Groupe;
 
 @Mapper(componentModel = "spring")
-public interface GroupeMapper {
+public interface GroupeMapper extends AbstractMapper<Groupe, GroupeBasicDTO, GroupeFullDTO> {
     GroupeBasicDTO toBasicDTO(Groupe entity);
 
     GroupeFullDTO toFullDTO(Groupe entity);

@@ -9,7 +9,7 @@ import rm_school_api.entity.Discipline;
 import rm_school_api.entity.Inscription;
 
 @Mapper(componentModel = "spring")
-public interface DisciplineMapper {
+public interface DisciplineMapper extends AbstractMapper<Discipline, DisciplineBasicDTO, DisciplineFullDTO> {
     @Mapping(source = "inscription.id", target = "inscriptionId")
     DisciplineBasicDTO toBasicDTO(Discipline entity);
 

@@ -9,7 +9,7 @@ import rm_school_api.entity.CompteUtilisateur;
 import rm_school_api.entity.Eleve;
 
 @Mapper(componentModel = "spring")
-public interface EleveMapper {
+public interface EleveMapper extends AbstractMapper<Eleve, EleveBasicDTO, EleveFullDTO> {
     @Mapping(source = "compteUtilisateur.id", target = "compteUtilisateurId")
     EleveBasicDTO toBasicDTO(Eleve entity);
 

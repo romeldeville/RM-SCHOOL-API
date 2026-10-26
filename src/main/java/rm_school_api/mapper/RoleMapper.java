@@ -9,7 +9,7 @@ import rm_school_api.entity.Privilege;
 import rm_school_api.entity.Role;
 
 @Mapper(componentModel = "spring")
-public interface RoleMapper {
+public interface RoleMapper extends AbstractMapper<Role, RoleBasicDTO, RoleFullDTO> {
     RoleBasicDTO toBasicDTO(Role entity);
 
     RoleFullDTO toFullDTO(Role entity);

@@ -13,7 +13,7 @@ import rm_school_api.entity.Niveau;
 import rm_school_api.entity.Pension;
 
 @Mapper(componentModel = "spring")
-public interface NiveauMapper {
+public interface NiveauMapper extends AbstractMapper<Niveau, NiveauBasicDTO, NiveauFullDTO> {
     @Mapping(source = "cycle.id", target = "cycleId")
     @Mapping(source = "pension.id", target = "pensionId")
     NiveauBasicDTO toBasicDTO(Niveau entity);

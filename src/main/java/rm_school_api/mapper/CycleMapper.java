@@ -9,7 +9,7 @@ import rm_school_api.entity.Cycle;
 import rm_school_api.entity.Section;
 
 @Mapper(componentModel = "spring")
-public interface CycleMapper {
+public interface CycleMapper extends AbstractMapper<Cycle, CycleBasicDTO, CycleFullDTO> {
     @Mapping(source = "section.id", target = "sectionId")
     CycleBasicDTO toBasicDTO(Cycle entity);
 

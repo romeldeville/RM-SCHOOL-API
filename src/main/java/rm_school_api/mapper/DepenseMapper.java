@@ -9,7 +9,7 @@ import rm_school_api.entity.Depense;
 import rm_school_api.entity.InformationsEtablissementScolaire;
 
 @Mapper(componentModel = "spring")
-public interface DepenseMapper {
+public interface DepenseMapper extends AbstractMapper<Depense, DepenseBasicDTO, DepenseFullDTO> {
     @Mapping(source = "informationsEtablissementScolaire.id", target = "informationsEtablissementScolaireId")
     DepenseBasicDTO toBasicDTO(Depense entity);
 

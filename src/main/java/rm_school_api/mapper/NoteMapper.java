@@ -11,7 +11,7 @@ import rm_school_api.entity.Inscription;
 import rm_school_api.entity.Note;
 
 @Mapper(componentModel = "spring")
-public interface NoteMapper {
+public interface NoteMapper extends AbstractMapper<Note, NoteBasicDTO, NoteFullDTO> {
     @Mapping(source = "inscription.id", target = "inscriptionId")
     @Mapping(source = "coursEnseignant.id", target = "coursEnseignantId")
     NoteBasicDTO toBasicDTO(Note entity);

@@ -11,7 +11,7 @@ import rm_school_api.entity.Eleve;
 import rm_school_api.entity.Inscription;
 
 @Mapper(componentModel = "spring")
-public interface InscriptionMapper {
+public interface InscriptionMapper extends AbstractMapper<Inscription, InscriptionBasicDTO, InscriptionFullDTO> {
     @Mapping(source = "eleve.id", target = "eleveId")
     @Mapping(source = "classe.id", target = "classeId")
     InscriptionBasicDTO toBasicDTO(Inscription entity);

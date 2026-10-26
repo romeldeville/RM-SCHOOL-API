@@ -11,7 +11,7 @@ import rm_school_api.entity.EtablissementScolaire;
 import rm_school_api.entity.InformationsEtablissementScolaire;
 
 @Mapper(componentModel = "spring")
-public interface InformationsEtablissementScolaireMapper {
+public interface InformationsEtablissementScolaireMapper extends AbstractMapper<InformationsEtablissementScolaire, InformationsEtablissementScolaireBasicDTO, InformationsEtablissementScolaireFullDTO> {
     @Mapping(source = "anneeScolaire.id", target = "anneeScolaireId")
     @Mapping(source = "etablissementScolaire.id", target = "etablissementScolaireId")
     InformationsEtablissementScolaireBasicDTO toBasicDTO(InformationsEtablissementScolaire entity);

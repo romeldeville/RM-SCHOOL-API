@@ -9,7 +9,7 @@ import rm_school_api.entity.CreneauHoraire;
 import rm_school_api.entity.TypeCreneau;
 
 @Mapper(componentModel = "spring")
-public interface CreneauHoraireMapper {
+public interface CreneauHoraireMapper extends AbstractMapper<CreneauHoraire, CreneauHoraireBasicDTO, CreneauHoraireFullDTO> {
     @Mapping(source = "typeCreneau.id", target = "typeCreneauId")
     CreneauHoraireBasicDTO toBasicDTO(CreneauHoraire entity);
 

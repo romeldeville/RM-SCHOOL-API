@@ -9,7 +9,7 @@ import rm_school_api.entity.Inscription;
 import rm_school_api.entity.Paiement;
 
 @Mapper(componentModel = "spring")
-public interface PaiementMapper {
+public interface PaiementMapper extends AbstractMapper<Paiement, PaiementBasicDTO, PaiementFullDTO> {
     @Mapping(source = "inscription.id", target = "inscriptionId")
     PaiementBasicDTO toBasicDTO(Paiement entity);
 

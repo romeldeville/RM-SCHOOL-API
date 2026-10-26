@@ -6,7 +6,7 @@ import rm_school_api.dto.full.AnneeScolaireFullDTO;
 import rm_school_api.entity.AnneeScolaire;
 
 @Mapper(componentModel = "spring")
-public interface AnneeScolaireMapper {
+public interface AnneeScolaireMapper extends AbstractMapper<AnneeScolaire, AnneeScolaireBasicDTO, AnneeScolaireFullDTO> {
     AnneeScolaireBasicDTO toBasicDTO(AnneeScolaire entity);
 
     AnneeScolaireFullDTO toFullDTO(AnneeScolaire entity);

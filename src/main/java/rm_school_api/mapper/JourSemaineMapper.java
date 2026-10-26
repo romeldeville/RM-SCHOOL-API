@@ -6,7 +6,7 @@ import rm_school_api.dto.full.JourSemaineFullDTO;
 import rm_school_api.entity.JourSemaine;
 
 @Mapper(componentModel = "spring")
-public interface JourSemaineMapper {
+public interface JourSemaineMapper extends AbstractMapper<JourSemaine, JourSemaineBasicDTO, JourSemaineFullDTO> {
     JourSemaineBasicDTO toBasicDTO(JourSemaine entity);
 
     JourSemaineFullDTO toFullDTO(JourSemaine entity);

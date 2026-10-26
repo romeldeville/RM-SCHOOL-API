@@ -9,7 +9,7 @@ import rm_school_api.entity.InformationsEtablissementScolaire;
 import rm_school_api.entity.Parametre;
 
 @Mapper(componentModel = "spring")
-public interface ParametreMapper {
+public interface ParametreMapper extends AbstractMapper<Parametre, ParametreBasicDTO, ParametreFullDTO> {
     @Mapping(source = "informationsEtablissementScolaire.id", target = "informationsEtablissementScolaireId")
     ParametreBasicDTO toBasicDTO(Parametre entity);
 

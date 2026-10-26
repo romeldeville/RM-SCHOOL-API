@@ -6,7 +6,7 @@ import rm_school_api.dto.full.MatiereFullDTO;
 import rm_school_api.entity.Matiere;
 
 @Mapper(componentModel = "spring")
-public interface MatiereMapper {
+public interface MatiereMapper extends AbstractMapper<Matiere, MatiereBasicDTO, MatiereFullDTO> {
     MatiereBasicDTO toBasicDTO(Matiere entity);
 
     MatiereFullDTO toFullDTO(Matiere entity);
