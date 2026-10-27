@@ -14,6 +14,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.SuperBuilder;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "NOTE")
 @AttributeOverride(name = "id", column = @Column(name = "ID_NOTE"))
@@ -25,39 +27,39 @@ public class Note extends AbstractEntity {
 
     @PositiveOrZero(message = "la première évaluation doit être positive ou nulle")
     @Column(name = "PREMIERE_EVALUATION", precision = 15, scale = 2)
-    private Double premiereEvaluation;
+    private BigDecimal premiereEvaluation;
 
     @PositiveOrZero(message = "la deuxième évaluation doit être positive ou nulle")
     @Column(name = "DEUXIEME_EVALUATION", precision = 15, scale = 2)
-    private Double deuxiemeEvaluation;
+    private BigDecimal deuxiemeEvaluation;
 
     @PositiveOrZero(message = "la troisième évaluation doit être positive ou nulle")
     @Column(name = "TROISIEME_EVALUATION", precision = 15, scale = 2)
-    private Double troisiemeEvaluation;
+    private BigDecimal troisiemeEvaluation;
 
     @PositiveOrZero(message = "la quatrième évaluation doit être positive ou nulle")
     @Column(name = "QUATRIEME_EVALUATION", precision = 15, scale = 2)
-    private Double quatriemeEvaluation;
+    private BigDecimal quatriemeEvaluation;
 
     @PositiveOrZero(message = "la cinquième évaluation doit être positive ou nulle")
     @Column(name = "CINQUIEME_EVALUATION", precision = 15, scale = 2)
-    private Double cinquiemeEvaluation;
+    private BigDecimal cinquiemeEvaluation;
 
     @PositiveOrZero(message = "la sixième évaluation doit être positive ou nulle")
     @Column(name = "SIXIEME_EVALUATION", precision = 15, scale = 2)
-    private Double sixiemeEvaluation;
+    private BigDecimal sixiemeEvaluation;
 
     @PositiveOrZero(message = "la septième évaluation doit être positive ou nulle")
     @Column(name = "SEPTIEME_EVALUATION", precision = 15, scale = 2)
-    private Double septiemeEvaluation;
+    private BigDecimal septiemeEvaluation;
 
     @PositiveOrZero(message = "la huitième évaluation doit être positive ou nulle")
     @Column(name = "HUITIEME_EVALUATION", precision = 15, scale = 2)
-    private Double huitiemeEvaluation;
+    private BigDecimal huitiemeEvaluation;
 
     @PositiveOrZero(message = "la neuvième évaluation doit être positive ou nulle")
     @Column(name = "NEUVIEME_EVALUATION", precision = 15, scale = 2)
-    private Double neuviemeEvaluation;
+    private BigDecimal neuviemeEvaluation;
 
     @NotNull(message = "l'inscription est obligatoire")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)

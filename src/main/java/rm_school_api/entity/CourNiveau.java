@@ -14,6 +14,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.SuperBuilder;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "COUR_NIVEAU")
 @AttributeOverride(name = "id", column = @Column(name = "ID_COUR_NIVEAU"))
@@ -25,11 +27,11 @@ public class CourNiveau extends AbstractEntity {
 
     @PositiveOrZero(message = "le coefficient doit être positif ou nul")
     @Column(name = "COEFFICIENT", precision = 15, scale = 2)
-    private Double coefficient;
+    private BigDecimal coefficient;
 
     @PositiveOrZero(message = "le nombre d'heures hebdomadaires doit être positif ou nul")
     @Column(name = "NOMBRE_HEURES_HEBDO", precision = 15, scale = 2)
-    private Double nombreHeuresHebdo;
+    private BigDecimal nombreHeuresHebdo;
 
     @NotNull(message = "le groupe est obligatoire")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)

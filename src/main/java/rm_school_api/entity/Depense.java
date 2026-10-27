@@ -16,6 +16,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.SuperBuilder;
 
+import java.math.BigDecimal;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -38,7 +40,7 @@ public class Depense extends AbstractEntity {
     @NotNull(message = "le montant est obligatoire")
     @PositiveOrZero(message = "le montant doit être positif ou nul")
     @Column(name = "MONTANT", nullable = false, precision = 15, scale = 2)
-    private Double montant;
+    private BigDecimal montant;
 
     @Size(max = 10, message = "la devise ne doit pas dépasser 10 caractères")
     @Column(name = "DEVISE", length = 10)

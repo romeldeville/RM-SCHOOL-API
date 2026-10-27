@@ -19,6 +19,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.SuperBuilder;
 
+import java.math.BigDecimal;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -46,11 +48,11 @@ public class Niveau extends AbstractEntity {
 
     @PositiveOrZero(message = "la moyenne admise doit être positive ou nulle")
     @Column(name = "MOYENNE_ADMISE", precision = 15, scale = 2)
-    private Double moyenneAdmise;
+    private BigDecimal moyenneAdmise;
 
     @PositiveOrZero(message = "la moyenne de passage doit être positive ou nulle")
     @Column(name = "MOYENNE_PASSAGE", precision = 15, scale = 2)
-    private Double moyennePassage;
+    private BigDecimal moyennePassage;
 
     @NotNull(message = "le cycle est obligatoire")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)

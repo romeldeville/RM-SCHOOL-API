@@ -16,6 +16,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.SuperBuilder;
 
+import java.math.BigDecimal;
+
 import java.time.LocalDate;
 
 @Entity
@@ -89,7 +91,7 @@ public class InformationsPersonnel extends AbstractEntity {
 
     @PositiveOrZero(message = "le quota horaire doit être positif ou nul")
     @Column(name = "QUOTA_HORAIRE", precision = 15, scale = 2)
-    private Double quotaHoraire;
+    private BigDecimal quotaHoraire;
 
     @Column(name = "DATE_ENTREE_FONCTION_PUBLIQUE")
     private LocalDate dateEntreeFonctionPublique;

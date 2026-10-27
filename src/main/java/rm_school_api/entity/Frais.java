@@ -16,6 +16,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.SuperBuilder;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "FRAIS")
 @AttributeOverride(name = "id", column = @Column(name = "ID_FRAIS"))
@@ -37,7 +39,7 @@ public class Frais extends AbstractEntity {
     @NotNull(message = "le montant est obligatoire")
     @PositiveOrZero(message = "le montant doit être positif ou nul")
     @Column(name = "MONTANT", nullable = false, precision = 15, scale = 2)
-    private Double montant;
+    private BigDecimal montant;
 
     @NotNull(message = "la pension est obligatoire")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
